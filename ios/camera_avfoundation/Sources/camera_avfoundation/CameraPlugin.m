@@ -106,7 +106,7 @@ static FlutterError *FlutterErrorFromNSError(NSError *error) {
                       FlutterError *_Nullable))completion {
   dispatch_async(self.captureSessionQueue, ^{
     NSMutableArray *discoveryDevices =
-        [@[ AVCaptureDeviceTypeBuiltInWideAngleCamera, AVCaptureDeviceTypeBuiltInTelephotoCamera, AVCaptureDeviceTypeBuiltInDualWideCamera, AVCaptureDeviceTypeBuiltInDualCamera, AVCaptureDeviceTypeBuiltInTripleCamera ]
+        [@[ AVCaptureDeviceTypeBuiltInWideAngleCamera, AVCaptureDeviceTypeBuiltInTelephotoCamera ]
             mutableCopy];
     if (@available(iOS 13.0, *)) {
       [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInUltraWideCamera];
