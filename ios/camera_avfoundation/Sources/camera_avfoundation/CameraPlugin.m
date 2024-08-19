@@ -115,6 +115,7 @@ static FlutterError *FlutterErrorFromNSError(NSError *error) {
       [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInDualCamera];
       [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInTripleCamera];
       [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInTrueDepthCamera];
+      [discoveryDevices addObject:AVCaptureDeviceTypeContinuityCamera];
     }
     AVCaptureDeviceDiscoverySession *discoverySession = [AVCaptureDeviceDiscoverySession
         discoverySessionWithDeviceTypes:discoveryDevices
