@@ -110,7 +110,9 @@ static FlutterError *FlutterErrorFromNSError(NSError *error) {
             mutableCopy];
     if (@available(iOS 13.0, *)) {
       [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInUltraWideCamera];
-      [discoveryDevices addObject:AVCaptureDeviceTypeBuiltInTripleCamera];
+    }
+    if (@available(iOS 17.0, *)) {
+      [requiredTypes addObject:AVCaptureDeviceTypeExternal];
     }
     AVCaptureDeviceDiscoverySession *discoverySession = [AVCaptureDeviceDiscoverySession
         discoverySessionWithDeviceTypes:discoveryDevices
